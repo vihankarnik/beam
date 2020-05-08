@@ -2,9 +2,7 @@ from flask import Flask, render_template, request
 
 
 # app = Flask()
-app = Flask(__name__,static_folder='static')
-
-
+app = Flask(__name__, static_folder='static')
 
 #Routes
 @app.route("/")

@@ -1,39 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Vihan's Website</title>
-        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}"
-    </head>
-    
-    <body>
-        <h1>Henlo frenz</h1>
-        <p>hello frenz this is my website</p>
-        <a href="https://github.com/beyondez" target="_blank">
-            <img src="/static/img/github.png" alt="github" height="200px" width="210px">
-        </a>
-
-        <br>
-        <hr>
-        <br>
-        
-        <form action="form" target="_blank" method="POST">
-            <div>
-                <label>Name</label>
-                <input type="text" name="name">
-            </div>
-                <br>
-            <div>
-                <label>Password</label>
-                <input type="text" name="Password">
-            </div>
-                <br>
-            <div>
-                <label>Message</label>
-                <textarea name="form" cols="30" rows="10"></textarea>
-            </div>
-                <br>
-            <input type="submit" name="submit" value="Submit">
-        </form>
-        
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <form action="form" target="_blank" method="POST">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name">
+        </div>
+            <br>
+        <div>
+            <label>Password</label>
+            <input type="text" name="Password">
+        </div>
+            <br>
+        <div>
+            <label>Message</label>
+            <textarea name="form" cols="30" rows="10"></textarea>
+        </div>
+            <br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+{% endblock %}

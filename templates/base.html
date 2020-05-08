@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vihan's Website</title>
+        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+    </head>
+    
+    <body>
+        <a href="https://github.com/beyondez" target="_blank">
+            <img src="/static/img/github.png" alt="github" height="120px" width="125px">
+        </a>
+        <h1>Henlo frenz</h1>
+        <p>hello frenz this is my website</p>
+
+        <br>
+        <hr>
+        <br>
+        
+        {% block content %}{% endblock %}
+        
+    </body>
+</html>
