@@ -1,21 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
 {% block content %}
-    <form action="form" target="_blank" method="POST">
-        <div>
-            <label>Name</label>
-            <input type="text" name="name">
-        </div>
-            <br>
-        <div>
-            <label>Password</label>
-            <input type="text" name="Password">
-        </div>
-            <br>
-        <div>
-            <label>Message</label>
-            <textarea name="form" cols="30" rows="10"></textarea>
-        </div>
-            <br>
-        <input type="submit" name="submit" value="Submit">
-    </form>
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+        <h1>hello this is the homepage</h1>
+    </body>
+</html>
 {% endblock %}

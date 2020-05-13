@@ -1,0 +1,41 @@
+*{text-decoration: none;}
+a{text-decoration: none;}
+body{
+    font-family: 'Times New Roman', Georgia, Times, serif;
+    text-align: center;
+    text-decoration: bold;
+    text-decoration: blue;
+    background-image: url('/static/img/background.png');
+    background-repeat: no-repeat;
+}
+nav{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    border: 0;
+    padding:5px;
+
+}
+.navbuttons{
+    list-style: none;
+    display: inline-block;
+    text-decoration-color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: cyan;
+    border-radius: 50px;
+}
+.navbuttons a:hover{
+    color: skyblue;
+    transition: .2s;
+}
+nav img, navbuttons{cursor: pointer;}
+
+.col{
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+header{
+    background-color: cadetblue;
+}

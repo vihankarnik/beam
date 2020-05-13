@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Vihan's Website</title>
+        <title>{% block title %}{% endblock %} -Vihan's Website</title>
         <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='stylesheets/style.css')}}">
     </head>
     
     <body>
-        <a href="https://github.com/beyondez" target="_blank">
-            <img src="/static/img/github.png" alt="github" height="120px" width="125px">
+        <div class="navbar"><header><nav>
+                <a href="https://github.com/beyondez" target="_blank">
+                    <div class="github">
+                        <img src="/static/img/github.png" alt="github" height=100px width=105px>
+                    </div>
+                </a>
+                <ul>
+                    <li class="navbuttons"><a href="#">About</a></li>
+                    <li class="navbuttons"><a href="#">Blog</a></li>
+                    <li class="navbuttons"><a href="upload">Upload</a></li>
+                </ul>
+            </nav></header></div>
         </a>
         <h1>Henlo frenz</h1>
         <p>hello frenz this is my website</p>
