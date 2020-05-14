@@ -11,6 +11,7 @@ def index():
     return render_template('index.html')
 
 app.config["UPLOAD_FOLDER"] = "A:/beam/uploads"
+#app.config["UPLOAD_FOLDER"] = "/home/websiteuser/beam/uploads"
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
