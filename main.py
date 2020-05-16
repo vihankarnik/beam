@@ -21,8 +21,8 @@ def about():
 @app.route('/blog', methods=['GET', 'POST'])
 def blog():
     if request.method == 'POST' and request.form:
-        blogtext = request.form['blogtext']
-        blogger = request.form['blogger']
+        blogtext = request.form['blogtext'].strip()
+        blogger = request.form['blogger'].strip()
         bloglist = blogger+'\t'+blogtext
         if blogtext == "":
             print("No input")
