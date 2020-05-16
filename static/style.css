@@ -5,6 +5,7 @@ body{
     text-align: center;
     text-decoration: bold;
     text-decoration: blue;
+    background-color: skyblue;
     background-image: url('/static/img/background.png');
     background-repeat: no-repeat;
 }
@@ -20,6 +21,10 @@ nav{
 .navbuttons{
     list-style: none;
     display: inline-block;
+    font-size: 22px;
+    margin: 20px 10px;
+}
+.navbuttons a{
     text-decoration-color: black;
     padding: 10px 20px;
     cursor: pointer;
@@ -32,10 +37,36 @@ nav{
 }
 nav img, navbuttons{cursor: pointer;}
 
-.col{
-    background-color: rgba(200, 200, 200, 0.5);
+.uploadbody{
+    display: inline-block;
+    width: 40%;
+    background-color: rgba(176, 224, 230, 0.7);
 }
+.blogbody, .aboutbody, .homebody{
+    display: inline-block;
+    width: 80%;
+    background-color: rgba(176, 224, 230, 0.7);
+}
+.blogbody p{
+    text-align: left;
+    padding: 0px 16px;
+    margin: 0px;
 
+}
+.blogbody h2{
+    margin-bottom: 5px;
+    padding: 0px 5px;
+    color: blueviolet;
+    font-weight: 600;
+    text-align: left;
+}
 header{
     background-color: cadetblue;
+}
+.post{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border-color: cyan;
 }

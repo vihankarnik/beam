@@ -2,27 +2,23 @@
 {% block title %}Upload{% endblock %}
 
 {% block content %}
-
-
-<div class="col">
+<div style="text-align: center;">
+    <div class="uploadbody">
+      
+        <h1>Upload a File</h1>
+        <hr style="width: 40%"; >
     
-  <h1>Upload a File</h1>
-  <hr>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div>
+        <label>Select File</label>
+            <div>
+            <input type="file" name="file" class="post">
+            <label for="file">Select file...</label>
+            </div>
+        </div>
+        <input for="file" type="submit" value="Upload" class="post">
+        </form>
   
-  <form action="/upload" method="POST" enctype="multipart/form-data">
-
-    <div>
-    <label>Select File</label>
-      <div>
-        <input type="file" name="image" id="image">
-        <label for="image">Select file...</label>
-      </div>
     </div>
-
-    <button type="submit">Upload</button>
-
-  </form>
-
 </div>
-
 {% endblock %}
