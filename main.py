@@ -39,7 +39,7 @@ def blog():
         return render_template('blog.html', posts=blogposts)
 
 # upload
-app.config['UPLOAD_FOLDER'] = "uploads"
+app.config['UPLOAD_FOLDER'] = "uploads/"
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == "POST" and request.files:

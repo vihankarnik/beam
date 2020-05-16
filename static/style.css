@@ -8,6 +8,7 @@ body{
     background-color: skyblue;
     background-image: url('/static/img/background.png');
     background-repeat: no-repeat;
+    background-position:center top;
 }
 nav{
     box-sizing: border-box;
