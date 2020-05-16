@@ -27,11 +27,11 @@ def blog():
         if blogtext == "":
             print("No input")
             return redirect(request.url)
-        with open('uploads/blog.txt', 'a') as blogwrite:
+        with open('blog', 'a') as blogwrite: #blog is a file
             blogwrite.write(bloglist)
             blogwrite.write('\n')
             return redirect(request.url)
-    with open('uploads/blog.txt', 'r') as blogdata:
+    with open('blog', 'r') as blogdata: #blog is a file
         blog = blogdata.read()
         blogposts = blog.split('\n')
         for i in range(len(blogposts)):
