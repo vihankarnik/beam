@@ -29,11 +29,11 @@ def blog():
             print("No input")
             flash('Please Enter a Message')
             return redirect(request.url)
-        with open('blog', 'a') as blogwrite: #blog is a file
+        with open('templates/blog', 'a') as blogwrite: #blog is a file
             blogwrite.write(bloglist)
             blogwrite.write('\n')
             return redirect(request.url)
-    with open('blog', 'r') as blogdata: #blog is a file
+    with open('templates/blog', 'r') as blogdata: #blog is a file
         blog = blogdata.read()
         blogposts = blog.split('\n')
         for i in range(len(blogposts)):
