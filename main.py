@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash
 import os
 from werkzeug.utils import secure_filename
 
 
 # app = Flask()
 app = Flask(__name__, static_folder='static')
+app.secret_key = os.urandom(12)
 
 # routes
 # home
@@ -26,6 +27,7 @@ def blog():
         bloglist = blogger+'\t'+blogtext
         if blogtext == "":
             print("No input")
+            flash('Please Enter a Message')
             return redirect(request.url)
         with open('blog', 'a') as blogwrite: #blog is a file
             blogwrite.write(bloglist)
