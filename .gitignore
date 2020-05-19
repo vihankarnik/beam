@@ -3,3 +3,4 @@ uploads/*
 *.pyc
 windows_run.py
 beamenv
+venv

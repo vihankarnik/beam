@@ -34,7 +34,7 @@ nav{
 }
 .navbuttons a:hover{
     color: skyblue;
-    transition: .2s;
+    transition: .3s;
 }
 nav img, navbuttons{cursor: pointer;}
 
