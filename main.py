@@ -33,7 +33,7 @@ def blog():
             blogwrite.write(bloglist)
             blogwrite.write('\n')
             return redirect(request.url)
-    with open('templates/blog.txt', 'r') as blogdata: #blog is a file
+    with open('templates/blog.txt', 'r') as blogdata: # blog is a file
         blog = blogdata.read()
         blogposts = blog.split('\n')
         for i in range(len(blogposts)):
@@ -45,13 +45,10 @@ app.config['UPLOAD_FOLDER'] = "uploads/"
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == "POST" and request.files:
-        f = request.files["file"]
-        if f.filename == "":
-            print("No Filename")
-            return redirect(request.url)
-        filename = secure_filename(f.filename)
-        f.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-        print("File saved")
+        f = request.files.getlist('file') # here, "file" is the name of the input
+        for i in f:
+            i.save(os.path.join(app.config["UPLOAD_FOLDER"], i.filename))
+            print(i.filename+" *Has been saved")
         return redirect(request.url)
     return render_template('upload.html')
 
