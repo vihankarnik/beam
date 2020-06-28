@@ -5,7 +5,8 @@ from werkzeug.utils import secure_filename
 
 # app = Flask()
 app = Flask(__name__, static_folder='static')
-app.secret_key = os.urandom(12)
+app.secret_key = os.urandom(32)
+app.session_cookie_secure = True
 
 # routes
 # home
