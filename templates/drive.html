@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}{{g.user.username}}'s Drive{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <div class="homebody">
+    <div style="float:right; padding: 10px;">
+        <form method="POST">
+            <button name="Delete Account" value="True" class="button"><img src="/static/img/delete.png" title="Delete Account" height="35px" width="auto"></button>
+        </form>
+    </div>
+        <h1>This is {{g.user.username}}'s Drive</h1>
+        <h2>Upload a File</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div>
+                <div>
+                    <input type="file" name="file" class="post" multiple required>
+                </div>
+                <div>
+                    <input for="file" type="submit" value="Upload" class="post">
+                </div>
+            </div>
+        </form>
+        <div>
+            {% for file in files %}
+                <div>
+                    <li>
+                        <a href="{{url_for('displayfile', filename=file)}}" target="_blank">{{ file }}</a>
+                        <a href="{{url_for('downloadfile', filename=file)}}" title="Download"><img src="/static/img/download.png" alt="Download" height=25px width="auto" style="vertical-align: middle; padding: 2px;"></a>
+                    </li>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

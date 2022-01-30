@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <div class="loginbody">
+        <h1>Create an Account</h1>
+        <div class="loginbox">
+            <form accept-charset="UTF-8" method="post">
+
+                <label for="username_field" class="labelfont" style="margin-bottom: 8px">Username</label>
+                <input type="text" class="inputbox" name="newusername" id="username_field" autocomplete="off" required>
+
+                <label for="password_field" class="labelfont">Password</label>
+                <input type="password" class="inputbox" name="newpassword" id="password_field" autocomplete="off" required>
+
+                <input type="submit" class="loginbutton" name="signupsubmit" value="Sign up" >
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -6,23 +6,14 @@
     <div class="blogbody">
         <h1>Blog</h1>
         <hr>
-        
+
         <form action="/blog" method="POST">
             <label>What's on your mind?</label><br><br>
             <div>
-                <input type="text" name="blogger" placeholder="Enter your Name" required><br>
-                <textarea name="blogtext" cols="30" rows="5" placeholder="Type something...." style="font-family: 'Times New Roman';"></textarea><br>
+                <input type="text" name="blogger" placeholder="Enter your Name" autocomplete="off"required><br>
+                <textarea name="blogtext" cols="30" rows="5" placeholder="Type something...." autocomplete="off" style="font-family: 'Times New Roman';"></textarea><br>
                 <input for="text" type="submit" value="Post" class="post">
             </div>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    <ul class=flashes>
-                    {% for message in messages %}
-                        <li>{{ message }}</li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endwith %}
         </form>
         {% for i in posts %}
             <h2>{{i[0]}}</h3>

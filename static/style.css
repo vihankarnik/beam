@@ -1,4 +1,6 @@
-*{text-decoration: none;}
+*{
+    box-sizing: border-box;
+}
 a{text-decoration: none;}
 body{
     font-family: 'Times New Roman', Georgia, Times, serif;
@@ -43,11 +45,90 @@ nav img, navbuttons{cursor: pointer;}
     width: 40%;
     background-color: rgba(176, 224, 230, 0.7);
 }
-.blogbody, .aboutbody, .homebody{
+.blogbody, .homebody{
     display: inline-block;
-    width: 80%;
+    width: 60%;
     background-color: rgba(176, 224, 230, 0.7);
 }
+.loginbody{
+    display: inline-block;
+    width: 40%;
+    background-color: rgba(176, 224, 230, 0.7);
+}
+.loginbox{
+    text-align: left;
+    margin: 20px 30% 25px;
+    border: 1px solid rgb(33,38,45);
+    border-radius: 6px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(22, 27, 34, 1)
+}
+.labelfont{
+    font-size:18px;
+}
+.inputbox{
+    display: block;
+    width: 100%;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(201, 209, 217, 1);
+    vertical-align: middle;
+    background-color: rgba(13, 17, 23, 1);
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid rgba(48, 54, 61, 1);
+    border-radius: 6px;
+    outline: none;
+    box-shadow: var(--color-primer-shadow-inset);
+    margin: 5px 0px 15px;
+}
+.inputbox:focus{
+    border-color: rgb(31, 111, 235);
+    box-shadow: 0px 0px 5px 3px rgb(12, 45, 107);
+}
+.loginbutton{
+    text-align:center;
+    width: 100%;
+    color: white;
+    background-color: rgba(35, 134, 54);
+    border-color: rgba(32, 134, 54);
+    border: none;
+    margin-top: 5px;
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 6px;
+    appearance: none;
+}
+.loginbutton:hover{
+    background-color: rgb(46, 160, 67);
+}
+.loginbutton:focus{
+    box-shadow: 0px 0px 5px 3px rgb(35, 134, 54);
+}
+.flash{
+    color: white;
+    display: inline-block;
+    width: 40%;
+    padding: 15px 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid rgb(48, 54, 61);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: rgb(13, 17, 23);
+}
+
 .blogbody p{
     text-align: left;
     padding: 0px 16px;
@@ -61,10 +142,16 @@ nav img, navbuttons{cursor: pointer;}
     font-weight: 600;
     text-align: left;
 }
+.button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
 header{
     background-color: cadetblue;
 }
 .post{
+    cursor: pointer;
     padding: 5px;
     background-color: black;
     color: white;

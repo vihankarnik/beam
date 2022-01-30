@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <div class="loginbody">
+        <h1>Log in to Beam</h1>
+        <div class="loginbox">
+            <form accept-charset="UTF-8" method="post">
+
+                <label for="username_field" class="labelfont" style="margin-bottom: 8px">Username</label>
+                <input type="text" class="inputbox" name="username" id="username_field" autocomplete="off" required>
+
+                <label for="password_field" class="labelfont">Password</label>
+                <input type="password" class="inputbox" name="password" id="password_field" autocomplete="off" required>
+
+                <input type="submit" class="loginbutton" name="loginsubmit" value="Log in" >
+            </form>
+        </div>
+        <div style="text-align: center;">
+            <div class="flash">
+                New User? <a href="/signup">Create an account</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

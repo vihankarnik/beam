@@ -4,33 +4,43 @@
         <title>{% block title %}{% endblock %}- My Website</title>
         <link rel="shortcut icon" href="/static/favicon.ico">
         <link rel="stylesheet" type="text/css" href="static/style.css">
-        <meta charset="utf-8"/> 
+        <meta charset="utf-8"/>
         <!-- {{url_for('static', filename='stylesheets/style.css')}} -->
     </head>
-    
+
     <body>
         <div class="navbar"><header><nav>
-                <a href="https://github.com/beyondez" target="_blank">
+                <a href="https://github.com/vihankarnik" target="_blank">
                     <div class="github">
                         <img src="static/img/github.png" alt="github" height=100px width=auto>
                     </div>
                 </a>
                 <ul>
-                    <a href="/"><img src="/static/img/home.png" alt="home" height=45px width=auto style="vertical-align: middle; padding: 10px;"></a>
-                    <li class="navbuttons"><a href="/about">About</a></li>
+                    <a href="/" title="Home"><img src="/static/img/home.png" alt="home" height=60px width=auto style="vertical-align: middle; padding: 10px;"></a>
+                    {% if g.user %}
+                        <li class ="navbuttons"><a href="/drive">{{g.user.username}}'s Drive</a></li>
+                    {% else %}
+                        <li class="navbuttons"><a href="/login">Log in</a></li>
+                    {% endif %}
                     <li class="navbuttons"><a href="/blog">Blog</a></li>
-                    <li class="navbuttons"><a href="/upload">Upload</a></li>
+                    <a href="/logout" title="Log Out"><img src="/static/img/logout.png" alt="Log out" height=70px width=auto style="vertical-align: middle; padding: 10px;"></a>
                 </ul>
             </nav></header></div>
-        </a>
-        <h1>Henlo frenz</h1>
-        <p>hello frenz this is my website</p>
-
+        <h1>Henlo frenz this is my website</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flash style='width: 15%;'>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
         <br>
         <hr>
         <br>
-        
+
         {% block content %}{% endblock %}
-        
+
     </body>
 </html>
