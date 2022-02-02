@@ -90,9 +90,9 @@ def signup():
             Userswrite.write(newuserdata)
             Userswrite.write('\n')
             os.mkdir(f'Drive/{newusername}')
-            print(f"New account {newusername} *Has been created and saved.")
+            print(f"New user {newusername} *Has been created and saved.")
             loadUsers()
-            flash("New account created")
+            flash(f"New user {newusername} created")
             return redirect(url_for('login'))
     return render_template('signup.html')
 
@@ -116,6 +116,7 @@ def drive():
             shutil.rmtree(f'Drive/{g.user.username}')
             session.pop('user_name', None)
             print(f"User {g.user.username} *Has been deleted.")
+            flash(f"User {g.user.username} has been deleted.")
             loadUsers()
             return redirect(url_for('login'))
     if request.method == 'POST' and request.files:
@@ -124,10 +125,14 @@ def drive():
             i.save(os.path.abspath(f'Drive/{g.user.username}/{i.filename}'))
             print(f"File {i.filename} *Has been saved in Drive/{g.user.username}.")
         return redirect(url_for('drive'))
-    # for catching files
 
+    # for fetching files
     filenames = os.listdir(f'Drive/{g.user.username}')
-    return render_template('drive.html', files = filenames)
+
+    # a list of extensions that are image
+    imgtypes = ("apng", "avif", "bmp", "gif", "ico", "jpg", "jpeg", "jpe", "jif", "jfif", "png", "svg", "tif", "tiff", "webp", "xbm")
+
+    return render_template('drive.html', files = filenames, imgtypes=imgtypes)
 
 # displaying clicked file
 @app.route('/drive/<path:filename>')

@@ -14,7 +14,7 @@
         <form method="POST" enctype="multipart/form-data">
             <div>
                 <div>
-                    <input type="file" name="file" class="post" multiple required>
+                    <input type="file" name="file" class="inputbox" style="max-width: 260px; margin: 10px auto; color: white; display: inline-block;" multiple required>
                 </div>
                 <div>
                     <input for="file" type="submit" value="Upload" class="post">
@@ -23,9 +23,18 @@
         </form>
         <div>
             {% for file in files %}
-                <div>
+                <div class="file">
                     <li>
-                        <a href="{{url_for('displayfile', filename=file)}}" target="_blank">{{ file }}</a>
+                        <a href="{{url_for('displayfile', filename=file)}}" target="_blank">
+                            {% if file.split('.')[-1] in imgtypes %}
+                                <img src="/drive/{{file}}" style="max-width: 100px; max-height: 100px;">
+                            {% else %}
+                                <img src="static/img/file.png" style="width: 100px; max-height: 100px;">
+                            {% endif %}
+                            <br>
+                            {{ file }}
+                        </a>
+                        <br>
                         <a href="{{url_for('downloadfile', filename=file)}}" title="Download"><img src="/static/img/download.png" alt="Download" height=25px width="auto" style="vertical-align: middle; padding: 2px;"></a>
                     </li>
                 </div>
