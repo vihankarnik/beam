@@ -1,3 +1,6 @@
 __pycache__
-*.pyc
 venv
+
+Drive/*
+templates/blog.txt
+templates/Users.txt
