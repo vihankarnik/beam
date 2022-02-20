@@ -82,6 +82,13 @@ def signup():
     if request.method == 'POST' and request.form:
         newusername = request.form['newusername'].strip()
         newpassword = request.form['newpassword'].strip()
+
+        ifuserexists = [x for x in Users if x.username == newusername]
+        if ifuserexists:
+            print(f"User {newusername} *Already exists")
+            flash(f"User {newusername} already exists")
+            return redirect(url_for('login'))
+
         with open('templates/Users.txt', 'r') as Usersdata: # this is to get the last account number
             Userdata = Usersdata.read() # Userdata will contain the entire txt file
             Userline = Userdata.split('\n') # Userline contains each line [namepass,namepass]
