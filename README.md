@@ -2,6 +2,7 @@
 beam components
 <div>
     <img align=right width=60% src=Picture1.jpg>
+
     * Username-Password authentication
     * Cookies to rememeber logged-in user
     * Personal drive for each user to save their files in
