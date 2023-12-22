@@ -1,6 +1,8 @@
-# welcome to my website
-
-henlo frenz
-my name is vihan and this is my website
-
-just trying to learn flask
+## Overview
+beam components
+<img align=right src=Picture1.jpg>
+* Username-Password authentication
+* Cookies to rememeber logged-in user
+<img align=right src=Picture2.jpg>
+* Personal drive for each user to save their files in
+* Preview for photos and images for convenience
