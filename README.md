@@ -16,10 +16,10 @@
 
 ### How to run
 * Recommended to use Git Bash
-* Clone repository to your computer using SSH:
+* Clone repository to your computer using SSH:\n
 `git clone git@github.com:vihankarnik/beam.git`
-* Create virtual environment using python module `virtualenv` in beam home directory:
-`python3 -m virtualenv venv`
+* Create virtual environment using python module `virtualenv` in beam home directory:\n
+`python3 -m virtualenv venv`\n
 `source venv/bin/activate`
-* Install all required dependencies listed in `requirements.txt` into the virtual environment `venv`
+* Install all required dependencies listed in `requirements.txt` into the virtual environment `venv`\n
 `pip3 install -r requirements.txt`
