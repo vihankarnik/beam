@@ -16,7 +16,7 @@
 
 ---
 
-### How to run
+## How to run
 * Recommended to use [Git Bash](https://gitforwindows.org/)
 * Clone repository to your computer using SSH:  
 `git clone git@github.com:vihankarnik/beam.git`
