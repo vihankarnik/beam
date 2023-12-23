@@ -21,7 +21,7 @@
 * Clone repository to your computer using SSH:  
 `git clone git@github.com:vihankarnik/beam.git`
 * Create and activate virtual environment using python module `virtualenv` in beam home directory:  
-`pip3 install virtualenv`
+`pip3 install virtualenv`  
 `python3 -m virtualenv venv`  
 `source venv/bin/activate`
 * Install all required dependencies listed in `requirements.txt` into the virtual environment `venv`  
