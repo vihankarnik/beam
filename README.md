@@ -13,6 +13,7 @@
 <div align=center>
     <img align=center width=90% src=Picture2.jpg>
 </div>
+
 ### How to run
 * Recommended to use Git Bash
 * Clone repository to your computer using SSH: `git clone git@github.com:vihankarnik/beam.git`
