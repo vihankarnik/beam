@@ -34,5 +34,5 @@
 
 #### Modules used:
 * The User-Interface is written in HTML and CSS.
-* The backend of this application which is purely written in `Python` is powered by a micro web framework called `Flask` which utilises a templating engine called `Jinja2` to display the webpage templates. Handling of files is done through Python module ‘os’.
+* The backend of this application which is purely written in `Python` is powered by a micro web framework called `Flask` which utilises a templating engine called `Jinja2` to display the webpage templates. Handling of files is done through Python module `os`.
 * The client sends the uploaded file using a `POST` request and this is received by the server backend which is written in Python and securely saved. Downloading files is done through `GET` requests.
