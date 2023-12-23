@@ -17,7 +17,7 @@
 ---
 
 ### How to run
-* Recommended to use Git Bash
+* Recommended to use [Git Bash](https://gitforwindows.org/)
 * Clone repository to your computer using SSH:  
 `git clone git@github.com:vihankarnik/beam.git`
 * Create and activate virtual environment using python module `virtualenv` in beam home directory:  
